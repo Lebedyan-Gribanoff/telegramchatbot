@@ -145,8 +145,8 @@ async def remind(update, cotext):
     user = update.effective_user
     user_id = update.message.chat_id
 
-    query = f"SELECT * FROM tasks WHERE user_id = {user_id}"
-    c.execute(query)  # выполняем запрос
+    query = f"SELECT * FROM tasks WHERE user_id = ?"
+    c.execute(query, (user_id,))  # выполняем запрос
     rows = c.fetchall()  # получаем все найденные строки
 
     if rows is None:
@@ -173,7 +173,7 @@ async def remind(update, cotext):
                     c.execute("DELETE FROM tasks WHERE task=? AND user_id=?", (task, user_id))
                     conn.commit()
 
-            c.execute(query)
+            c.execute(query, (user_id,))
             rows = c.fetchall()
             if rows is None:
                 await update.message.reply_text(
@@ -203,5 +203,3 @@ def main():
 # Запускаем функцию main()
 if __name__ == '__main__':
     main()
-
-    
