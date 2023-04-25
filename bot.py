@@ -12,7 +12,7 @@ TOKEN = '6034472814:AAGQMRiI97yXXlIlok6yC0K08eCZTSILFf0'
 #
 reply_keyboard = [['/new', '/show_all'],
                   ['/delete', '/delete_all'],
-                  ['/remind', '/stop']]
+                  ['/remind']]
 markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
 
 # создаем дб где будем хранить список задач
