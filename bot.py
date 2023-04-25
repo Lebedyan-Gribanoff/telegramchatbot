@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 async def start(update, context):
     user = update.effective_user
     await update.message.reply_html(
-        f"Привет {user.mention_html()}! Я - твой тайм-менеджер, я помогу тебе сэкономить много драгоценного времени!\n"
+        f"Привет {user.mention_html()}! Я твой тайм-менеджер, я помогу тебе сэкономить много драгоценного времени!\n"
         "Чтобы узнать список команд, напиши /help.",
         reply_markup=markup
     )
