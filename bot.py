@@ -200,8 +200,6 @@ def main():
     application.run_polling()
 
 
-
-
 # Запускаем функцию main()
 if __name__ == '__main__':
     main()
