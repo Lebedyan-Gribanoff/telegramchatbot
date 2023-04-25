@@ -145,7 +145,7 @@ async def remind(update, cotext):
     user = update.effective_user
     user_id = update.message.chat_id
 
-    query = f"SELECT * FROM tasks WHERE user_id = {id}"
+    query = f"SELECT * FROM tasks WHERE user_id = {user_id}"
     c.execute(query)  # выполняем запрос
     rows = c.fetchall()  # получаем все найденные строки
 
