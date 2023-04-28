@@ -48,7 +48,7 @@ async def start(update, context):
 async def help(update, context):
     user = update.effective_user
     await update.message.reply_text(
-        "/new <name> <time> - создать новую задачу, ремя в формате 2023-04-25 12:00;\n"
+        "/new <name> <time> - создать новую задачу, ремя в формате 2023-04-25 12:00, текст на английском;\n"
         "/show_all - показать список твоих активных задач;\n"
         "/delete <task_id> - удалить одну из ваших задач по номеру;\n"
         "/delete_all - удалить все задачи;\n"
